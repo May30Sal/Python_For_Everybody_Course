@@ -320,7 +320,7 @@ from math import pi
 #! Exercises - Chapter 8 - Lists
 
 #! creting a list
-fruit_list = ['apple', 'orange', 'banana', [2, 5.0]]
+#fruit_list = ['apple', 'orange', 'banana', [2, 5.0]]
 #print(fruit_list)
 #print(fruit_list[2])
 #print(len(fruit_list))
@@ -364,6 +364,45 @@ fruit_list = ['apple', 'orange', 'banana', [2, 5.0]]
 #    return x
 
 #print(middle(i))
+
+#! Exercise 4
+# with open ('romeo.txt', mode='r') as file:
+#     data = file.read()
+#     romeo = data.split()
+#     unique = []
+#     for word in romeo:
+#         if word not in unique:
+#             unique.append(word)
+#     unique.sort()
+#     print(unique)
+
+#! Exercise 5
+# total = 0
+# unique_mail = []
+# with open('mbox.txt', mode = 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             sender = line.split()
+#             if sender[1] not in unique_mail:  #! Extra operation to save only the unique emails on a list!
+#                 unique_mail.append(sender[1])
+#             #print(sender[1])
+#             #total = total + 1
+# #print(total)
+# print(unique_mail)
+# print(len(unique_mail))
+
+#! Exercise 6
+# numbers = []
+# number = input("Tell me a number: ")
+# while number != 'done':
+#     numbers.append(number)
+#     number = input("Tell me a number: ")
+# minimo = min(numbers)
+# maximo = max(numbers)
+
+# print(float(minimo))
+# print(float(maximo))
 
 
     
