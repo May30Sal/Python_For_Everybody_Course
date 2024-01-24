@@ -404,6 +404,29 @@ from math import pi
 # print(float(minimo))
 # print(float(maximo))
 
+#! Challenge - Exercise 4
+# counts = dict()
+# with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             if words[1] not in counts:
+#                 counts[words[1]] = 1
+#             else: 
+#                 counts[words[1]] += 1
+
+# max_key = None
+# max_val = None
+
+# for key, val in counts.items():
+
+#     if max_val is None or val > max_val:
+#         max_val = val
+#         max_key = key
+
+# print(max_key, max_val)
+
 
     
 #! OOP examples
