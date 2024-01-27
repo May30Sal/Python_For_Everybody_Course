@@ -404,6 +404,50 @@ from math import pi
 # print(float(minimo))
 # print(float(maximo))
 
+#! Exercises - Chapter 9 - Dictionaries
+
+#! Exercise 1 (creating a dict with words in a file)
+# words = {}
+# with open('romeo.txt', 'r') as file:
+#     for line in file:
+#         word = line.split()
+#         for i in word:
+#             if i not in words:
+#                 words[i] = 1
+        
+# print(words)
+# print('But' in words)  #! It is case sensitive! 
+
+# #! This will return the value corresponding to the key 'Also', 
+# #! and if it doesn't exist will return the default value we set, 0 in this case
+# print(words.get('Also', 0))
+
+# #! Exercise 2
+# counts = dict()
+# with open('mbox-short.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             if words[2] not in counts:
+#                 counts[words[2]] = 1
+#             else:
+#                 counts[words[2]] += 1
+# print(counts)
+
+#! Exercise 3
+# counts = dict()
+# with open('mbox-short.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             if words[1] not in counts:
+#                 counts[words[1]] = 1
+#             else:
+#                 counts[words[1]] += 1
+# print(counts)
+
 #! Challenge - Exercise 4
 # counts = dict()
 # with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
@@ -427,7 +471,32 @@ from math import pi
 
 # print(max_key, max_val)
 
+#! Exercise 5 - get in a dict only the domain name and the count of how many emails they send
+counts = dict()
+with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
+    for line in file:
+        if line.startswith('From '):
+            line.rstrip()
+            words = line.split()
+            domain = words[1].rsplit('@')
+            if domain[1] not in counts:                       
+                counts[domain[1]] = 1
+            else: 
+                counts[domain[1]] += 1
+print(counts)      
 
+#! Getting the dict values and putting them in a list
+# fruits = {'apple': 1, 'banana': 2, 'orange': 3 }
+# num = []
+# for i in fruits.values():
+#     num.append(i)
+# print(num)
+
+#! Getting the dict keys and putting them in a list
+# fruitslist = []
+# for fruit in fruits:
+#     fruitslist.append(fruit)
+# print(fruitslist)
     
 #! OOP examples
 
