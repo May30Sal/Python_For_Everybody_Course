@@ -1,7 +1,7 @@
-import math #built-in module, don't need to install using pip package manager
-import numpy as np
+# import math #built-in module, don't need to install using pip package manager
+# import numpy as np
 # import pandas as pd - Has to be installed too
-from math import pi
+# from math import pi
 
 #! Examples of usage of the libraries math and numpy
 #print(math.pi)
@@ -414,9 +414,12 @@ from math import pi
 #         for i in word:
 #             if i not in words:
 #                 words[i] = 1
+#             else:
+#                 words[i] += 1
         
 # print(words)
 # print('But' in words)  #! It is case sensitive! 
+
 
 # #! This will return the value corresponding to the key 'Also', 
 # #! and if it doesn't exist will return the default value we set, 0 in this case
@@ -472,18 +475,18 @@ from math import pi
 # print(max_key, max_val)
 
 #! Exercise 5 - get in a dict only the domain name and the count of how many emails they send
-counts = dict()
-with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
-    for line in file:
-        if line.startswith('From '):
-            line.rstrip()
-            words = line.split()
-            domain = words[1].rsplit('@')
-            if domain[1] not in counts:                       
-                counts[domain[1]] = 1
-            else: 
-                counts[domain[1]] += 1
-print(counts)      
+# counts = dict()
+# with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             domain = words[1].rsplit('@')
+#             if domain[1] not in counts:                       
+#                 counts[domain[1]] = 1
+#             else: 
+#                 counts[domain[1]] += 1
+# print(counts)      
 
 #! Getting the dict values and putting them in a list
 # fruits = {'apple': 1, 'banana': 2, 'orange': 3 }
@@ -497,7 +500,11 @@ print(counts)
 # for fruit in fruits:
 #     fruitslist.append(fruit)
 # print(fruitslist)
-    
+
+
+#! Exercises - Chapter 10 - Tuples
+
+
 #! OOP examples
 
 # Inheritance
