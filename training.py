@@ -462,6 +462,7 @@
 #                 counts[words[1]] = 1
 #             else: 
 #                 counts[words[1]] += 1
+# print(counts)
 
 # max_key = None
 # max_val = None
@@ -473,6 +474,34 @@
 #         max_key = key
 
 # print(max_key, max_val)
+
+#! 2nd way:
+# counts = dict()
+# with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             for w in words:     
+#             #    print(w) #! Print just the words
+#                 if words[1] not in counts:
+#                  counts[words[1]] = 1
+#                 else: 
+#                  counts[words[1]] += 1
+# print(counts)
+
+#! 3rd way using get() method:
+# counts = dict()
+# with open('G:\My Drive\Programming\Learning_Python\PYE\mbox.txt', 'r') as file:
+#     for line in file:
+#         if line.startswith('From '):
+#             line.rstrip()
+#             words = line.split()
+#             for w in words:
+#                 counts[words[1]] = counts.get(words[1], 0) + 1 
+#             #! Get in the dict "counts" the word if it doesn't exist and set its value to 0
+# print(counts)
+
 
 #! Exercise 5 - get in a dict only the domain name and the count of how many emails they send
 # counts = dict()
@@ -503,6 +532,20 @@
 
 
 #! Exercises - Chapter 10 - Tuples
+#creating a tuple from a dict, then sorting it as a list
+groceries = {'rice': 1, 'beans': 2, 'meat': 5, 'butter': 3}
+update = list(groceries.items())
+update.sort()
+#print(type(update)) #dict items = tuple
+print(update)
+
+#creating a dict from a tuple and updating it
+newlist = dict()
+for x, y in groceries.items():
+    y = y + 1
+    newlist[x] = newlist.get(x, y)
+    print(newlist)
+    
 
 
 #! OOP examples
