@@ -534,18 +534,116 @@
 #! Exercises - Chapter 10 - Tuples
 #creating a tuple from a dict, then sorting it as a list
 groceries = {'rice': 1, 'beans': 2, 'meat': 5, 'butter': 3}
-update = list(groceries.items())
-update.sort()
-#print(type(update)) #dict items = tuple
-print(update)
+# update = list(groceries.items())
+# update.sort()
+# print(type(update)) #dict items = tuple
+# print(update)
+
+# Methods that reverse and sort the order of the dict items
+# print(list(reversed(groceries.items())))
+# print(list(sorted(groceries.items())))
 
 #creating a dict from a tuple and updating it
-newlist = dict()
-for x, y in groceries.items():
-    y = y + 1
-    newlist[x] = newlist.get(x, y)
-    print(newlist)
+# newlist = dict()
+# for x, y in groceries.items():
+#     y = y + 1
+#     newlist[x] = newlist.get(x, y)
+#     print(newlist)
     
+
+# For loop through the dict and update values
+# for k, v in list(groceries.items()):
+#     v = v + 1
+#     print(k,v)
+#     print(v, k)
+
+# For loop through the dict, create a list and sort values
+# l = list()
+# for k, v in list(groceries.items()):
+#     l.append((v, k)) # Needs to put inside parenthesis to append it!
+
+# l.sort(reverse=True)
+# print(l)
+
+#! Exercise 1
+# Opening the file
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "mbox-short.txt"
+# handle = open(name)
+
+# counts = dict()
+# for line in handle:
+#     if line.startswith('From '):
+#         line.rstrip()
+#         words = line.split()
+#         # print(words) # To see that when u split and put into a variable, u get words instead or caracteres!
+#         # print(words[5][:2]) # Slice to get only the first 2 numbers (hour)
+#         counts[words[1]] = counts.get(words[1], 0) + 1  
+
+# # Creating a list and appending the values and keys in this order
+# t_email = list()
+# for k, v in list(counts.items()):
+#     t_email.append((v, k))
+
+
+# # sorting the list in reverse order of values, and accesing the value-key
+# t_email.sort(reverse=True)
+# print(t_email[0][1], t_email[0][0])
+
+#! Challenge -  Exercise 2
+# Opening the file
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "mbox-short.txt"
+# handle = open(name)
+
+# counts = dict()
+# for line in handle:
+#     if line.startswith('From '):
+#         line.rstrip()
+#         words = line.split()
+#         # print(words) # To see that when u split and put into a variable, u get words instead or caracteres!
+#         # print(words[5][:2]) # Slice to get only the first 2 numbers (hour)
+#         counts[words[5][:2]] = counts.get(words[5][:2], 0) + 1  
+
+# sorted_list = list(counts.items())
+# sorted_list.sort()
+
+# for k, v in sorted_list:
+#     print(k, v)
+
+# # other way to print
+# print(sorted([(k, v) for k, v in counts.items()])) # as a list
+
+# for k, v in sorted([(k, v) for k, v in counts.items()]):  # as items
+#     print(k, v)
+
+#! Exercise 3 (I changed to uppercase, since my text was already in lowercase)
+# import string
+
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "romeo.txt"
+# handle = open(name)
+
+# counts = dict()
+# for line in handle:
+#     line.rstrip()
+#     line.split()
+#     line = line.upper() # To make all letters uppercase, since python counts them as different things
+#     for letter in line:
+#         if letter.isalpha(): # To return only alphabetical caracteres
+#             counts[letter] = counts.get(letter, 0) + 1
+
+# order_letters = list()            
+# for k, v in list(counts.items()):
+#     order_letters.append((v, k)) # Transform to UpperCase
+#     order_letters.sort(reverse=True)
+
+# print(order_letters)
+
+
 
 
 #! OOP examples
