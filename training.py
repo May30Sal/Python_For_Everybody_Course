@@ -2,6 +2,7 @@
 # import numpy as np
 # import pandas as pd - Has to be installed too
 # from math import pi
+import re
 
 #! Examples of usage of the libraries math and numpy
 #print(math.pi)
@@ -532,8 +533,8 @@
 
 
 #! Exercises - Chapter 10 - Tuples
-#creating a tuple from a dict, then sorting it as a list
-groceries = {'rice': 1, 'beans': 2, 'meat': 5, 'butter': 3}
+# creating a tuple from a dict, then sorting it as a list
+# groceries = {'rice': 1, 'beans': 2, 'meat': 5, 'butter': 3}
 # update = list(groceries.items())
 # update.sort()
 # print(type(update)) #dict items = tuple
@@ -644,7 +645,85 @@ groceries = {'rice': 1, 'beans': 2, 'meat': 5, 'butter': 3}
 # print(order_letters)
 
 
+#! Exercises - Chapter 11 - Regex
 
+#! Exercise 1 - without asking for a user input
+# count = 0
+# with open ('mbox.txt', mode='r') as file:
+#     for line in file: 
+#         line.rstrip()
+#         data = re.findall('^Author', line)
+#         if len(data) > 0:
+#             count = count + 1
+# print(count)
+
+#! Asking for the user input
+# name = input("Enter a regular expression: ")
+# count = 0
+# with open ('mbox.txt', mode='r') as file:
+#     for line in file: 
+#         line.rstrip()
+#         data = re.findall(name, line)
+#         if len(data) > 0:
+#             count = count + 1
+# print('mbox.txt had {} lines that matches {}'.format(count, name))
+
+# #! Exercise 2 
+
+# data_list = []
+# nums = []
+# name = input("Enter file:")
+# if len(name) < 1:
+#     name = "mbox-short.txt"
+# handle = open(name)
+# for line in handle:
+#     line.rstrip()
+#     data = re.findall('^New.*: ([0-9][0-9][0-9][0-9][0-9])', line)
+#     if len(data) > 0:
+#         data_list.append(data)
+
+
+# for x in data_list:
+#     y = ''.join(x) #! converting list into string
+#     nums.append(int(y))
+
+
+# print(sum(nums) / len(nums))
+
+#! Challenge 
+# data_list = []
+# nums = []
+# count = 0
+# with open ('actual_file.txt', mode='r') as file:
+#     for line in file:
+#         line.rstrip()
+#         data = re.findall('[0-9]+', line) # ou '\d+' to find the digits
+#         for num in data:
+#             y = ''.join(num) #! converting list into string
+#             nums.append(int(y)) #! converting list into int
+#             count = count + 1
+
+# #print(nums)
+# print(count)
+# print(sum(nums))
+
+
+#! Exercises - Chapter 12 - Networked Programs
+
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if len(data) < 1:
+        break
+    print(data.decode(), end='')
+
+mysock.close()
 
 #! OOP examples
 
