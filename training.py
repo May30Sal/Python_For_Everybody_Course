@@ -647,6 +647,12 @@ import re
 
 #! Exercises - Chapter 11 - Regex
 
+# s = '67n teste@gmail.com sji09'
+# x = re.findall('\S@\S+', s) #Will get only e@gmail.com
+# y = re.findall('\S+@\S+', s) #Will get the entire email
+# print(x)
+# print(y)
+
 #! Exercise 1 - without asking for a user input
 # count = 0
 # with open ('mbox.txt', mode='r') as file:
@@ -710,20 +716,156 @@ import re
 
 #! Exercises - Chapter 12 - Networked Programs
 
+#! Using socket
 import socket
 
-mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mysock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
-mysock.send(cmd)
+# mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# mysock.connect(('data.pr4e.org', 80))
+# cmd = 'GET http://data.pr4e.org/romeo.txt HTTP/1.0\r\n\r\n'.encode()
+# mysock.send(cmd)
 
-while True:
-    data = mysock.recv(512)
-    if len(data) < 1:
-        break
-    print(data.decode(), end='')
+# while True:
+#     data = mysock.recv(512)
+#     if len(data) < 1:
+#         break
+#     print(data.decode(), end='')
 
-mysock.close()
+# mysock.close()
+
+#! Exercise 1 (Need to fix it)
+
+#Ask for a user input and split it to get the host name
+# page = input('Enter a web page - ')
+# add = page.split('/')
+# try:
+#     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#     mysock.connect((add[2], 80))
+#     spot = str(page) #Get the entire input URL 
+#     cmd = ('GET {} HTTP/1.0\r\n\r\n'.format(spot)).encode()
+#     mysock.send(cmd)
+#     while True:
+#         data = mysock.recv(512)
+#         if len(data) < 1:
+#             break
+#         print(data.decode(), end='')
+
+#     mysock.close()
+
+# except:
+#     print('This is not a valid URL')
+
+#! Exercise 2
+# page = input('Enter a web page - ')
+# add = page.split('/')
+# try:
+#     mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+#     mysock.connect((add[2], 80))
+#     spot = str(page) #Get the entire input URL 
+#     cmd = ('GET {} HTTP/1.0\r\n\r\n'.format(spot)).encode()
+#     mysock.send(cmd)
+#     while True:
+#         data = mysock.recv(512)
+#         if len(data) < 1:
+#             break
+#         print(data.decode(), end='')
+
+#     mysock.close()
+
+# except:
+#     print('This is not a valid URL')
+
+
+# #! Parsing and web scraping
+# from bs4 import BeautifulSoup
+# import urllib.request, urllib.parse, urllib.error
+# import ssl
+
+# #Ignore SSL Certificate Errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# url = input('Enter - ')
+# html = urllib.request.urlopen(url, context=ctx).read()
+# soup = BeautifulSoup(html, 'html.parser')
+# # print(soup) #will print all the html in the page
+
+# #Retrieve a specific string, exaple: all the anchor tags
+# tags = soup('a')
+# for tag in tags:
+#     print(tag.get('href', None))
+
+#! Challenge 1
+# from bs4 import BeautifulSoup
+# import urllib.request, urllib.parse, urllib.error
+# import ssl
+
+# num_list = []
+# #Ignore SSL Certificate Errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# url = input('Enter - ')
+# html = urllib.request.urlopen(url, context=ctx).read()
+# soup = BeautifulSoup(html, 'html.parser')
+
+# #Retrieve the numbers
+# spans = soup('span')
+# for span in spans:
+#     num_list.append(int(span.contents[0])) #Get the content on the tag
+
+# print(len(num_list))
+# print(sum(num_list))
+    
+
+#! Challenge 2
+# from bs4 import BeautifulSoup
+# import urllib.request, urllib.parse, urllib.error
+# import ssl
+
+# #Ignore SSL Certificate Errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# #Ask user input
+# url = input('Enter URL: ')
+# count = input('Enter count: ')
+# position = input('Enter position: ')
+
+# new_count = int(count)
+# while new_count > 0:
+#     html = urllib.request.urlopen(url, context=ctx).read()
+#     soup = BeautifulSoup(html, 'html.parser')
+#     tags = soup('a')
+#     for tag in tags:
+#         new_link = tags[int(position)].get('href', None)
+    
+#     new_count = new_count - 1
+#     url = new_link
+#     print(new_link)
+
+
+#! Chapter 13 - Using Web Services
+
+#! Challenge 1
+import urllib.request, urllib.parse, urllib.error
+import xml.etree.ElementTree as ET
+
+#Ask user input
+url = input('Enter URL: ')
+
+fhand = urllib.request.urlopen(url)
+data = fhand.read()
+tree = ET.fromstring(data)
+counts = 0
+
+for item in tree.findall('.//count'):
+    counts = counts + int(item.text)
+
+print(counts)
+
 
 #! OOP examples
 
