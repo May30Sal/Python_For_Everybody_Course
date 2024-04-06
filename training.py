@@ -849,25 +849,238 @@ import socket
 
 #! Chapter 13 - Using Web Services
 
-#! Challenge 1
-import urllib.request, urllib.parse, urllib.error
-import xml.etree.ElementTree as ET
+#! Challenge 1 XML
+# import urllib.request, urllib.parse, urllib.error
+# import xml.etree.ElementTree as ET
 
-#Ask user input
-url = input('Enter URL: ')
+# #Ask user input
+# url = input('Enter URL: ')
 
-fhand = urllib.request.urlopen(url)
-data = fhand.read()
-tree = ET.fromstring(data)
-counts = 0
+# fhand = urllib.request.urlopen(url)
+# data = fhand.read()
+# tree = ET.fromstring(data)
+# counts = 0
 
-for item in tree.findall('.//count'):
-    counts = counts + int(item.text)
+# for item in tree.findall('.//count'):
+#     counts = counts + int(item.text)
 
-print(counts)
+# print(counts)
+
+#! Exercise 1 jSON
+# import urllib.request, urllib.parse, urllib.error
+# import json
+# import ssl
+
+# Important: As of January, 2024 this course no longer includes
+# The use of Google's Geocoding API in the content.   This
+# has been replaced by OpenStreetMap data
+# See the file opengeo.py
+
+# This file is here for previous versions of the course
+# materials and since it uses a proxy server to access the API,
+# it should work for a while.
+
+#print("See https://www.py4e.com/code3/opengeo.py")
+
+# api_key = 42
+# serviceurl = 'http://py4e-data.dr-chuck.net/json?'
+
+# # Ignore SSL certificate errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# while True:
+#     address = input('Enter location: ')
+#     if len(address) < 1: break
+
+#     parms = dict()
+#     parms['address'] = address
+#     if api_key is not False: parms['key'] = api_key
+#     url = serviceurl + urllib.parse.urlencode(parms)
+
+#     print('Retrieving', url)
+#     uh = urllib.request.urlopen(url, context=ctx)
+#     data = uh.read().decode()
+#     print('Retrieved', len(data), 'characters')
+
+#     try:
+#         js = json.loads(data)
+#     except:
+#         js = None
+
+#     if not js or 'status' not in js or js['status'] != 'OK':
+#         print('==== Failure To Retrieve ====')
+#         print(data)
+#         continue
+
+#     print(json.dumps(js, indent=4))
+
+#     lat = js['results'][0]['geometry']['location']['lat']
+#     lng = js['results'][0]['geometry']['location']['lng']
+#     print('lat', lat, 'lng', lng)
+#     location = js['results'][0]['formatted_address']
+#     print(location)
 
 
-#! OOP examples
+#     try: 
+#         country = js['results'][0]['address_components'][3]['short_name']
+#         country2 = js['results'][0]['address_components'][3]['long_name']
+#         print(country)
+#         print(country2)
+#     except:
+#         print('Not a country or Index error')
+#     break
+
+#! Challenge 2 JSON
+# import json
+# import urllib.request, urllib.parse, urllib.error
+# import ssl
+
+# # Ignore SSL certificate errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# counts = 0
+
+# while True:
+#     url = input('Enter url: ')
+#     if len(url) < 1: break
+
+#     print('Retrieving', url)
+#     uh = urllib.request.urlopen(url, context=ctx)
+#     data = uh.read().decode()
+#     print('Retrieved', len(data), 'characters')
+
+#     try:
+#         js = json.loads(data)
+#         for item in js['comments']:
+#             counts = counts + item['count']
+#     except:
+#         js = None
+#     break
+
+# print(counts)
+
+
+#! Example
+# import urllib.request, urllib.parse
+# import json, ssl
+
+# # Heavily rate limited proxy of https://www.geoapify.com/ api
+# serviceurl = 'https://py4e-data.dr-chuck.net/opengeo?'
+
+# # Ignore SSL certificate errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# while True:
+#     address = input('Enter location: ')
+#     if len(address) < 1: break
+
+#     address = address.strip()
+#     parms = dict()
+#     parms['q'] = address
+
+#     url = serviceurl + urllib.parse.urlencode(parms)
+
+#     print('Retrieving', url)
+#     uh = urllib.request.urlopen(url, context=ctx)
+#     data = uh.read().decode()
+#     print('Retrieved', len(data), 'characters', data[:20].replace('\n', ' '))
+
+#     try:
+#         js = json.loads(data)
+#     except:
+#         js = None
+
+#     if not js or 'features' not in js:
+#         print('==== Download error ===')
+#         print(data)
+#         break
+
+#     if len(js['features']) == 0:
+#         print('==== Object not found ====')
+#         print(data)
+#         break
+
+#     # print(json.dumps(js, indent=4))
+
+#     lat = js['features'][0]['properties']['lat']
+#     lon = js['features'][0]['properties']['lon']
+#     print('lat', lat, 'lon', lon)
+#     location = js['features'][0]['properties']['formatted']
+#     print(location)
+
+#! Challenge 3 JSON
+# import urllib.request, urllib.parse
+# import json, ssl
+
+# # Heavily rate limited proxy of https://www.geoapify.com/ api
+# serviceurl = 'https://py4e-data.dr-chuck.net/opengeo?'
+
+# # Ignore SSL certificate errors
+# ctx = ssl.create_default_context()
+# ctx.check_hostname = False
+# ctx.verify_mode = ssl.CERT_NONE
+
+# while True:
+#     address = input('Enter location: ')
+#     if len(address) < 1: break
+
+#     address = address.strip()
+#     parms = dict()
+#     parms['q'] = address
+
+#     url = serviceurl + urllib.parse.urlencode(parms)
+
+#     print('Retrieving', url)
+#     uh = urllib.request.urlopen(url, context=ctx)
+#     data = uh.read().decode()
+#     print('Retrieved', len(data), 'characters', data[:20].replace('\n', ' '))
+
+#     try:
+#         js = json.loads(data)
+#     except:
+#         js = None
+
+#     if not js or 'features' not in js:
+#         print('==== Download error ===')
+#         print(data)
+#         break
+
+#     if len(js['features']) == 0:
+#         print('==== Object not found ====')
+#         print(data)
+#         break
+
+#     # print(json.dumps(js, indent=4))
+
+#     plusCode = js['features'][0]['properties']['plus_code']
+#     print(plusCode)
+#     break
+
+
+#! Chapter 14 - Object Oriented Programming
+
+# class PartyAnimal:
+
+#    def __init__(self):
+#      self.x = 0
+
+#    def party(self) :
+#      self.x = self.x + 1
+#      print("So far",self.x)
+
+# an = PartyAnimal()
+# an.party()
+# an.party()
+# an.party()
+
+
+#! Other OOP examples
 
 # Inheritance
 #class A:
@@ -911,3 +1124,195 @@ print(counts)
 #d = D()
 #print(d.a())
 
+#! Chapter 15 - Database 
+#! Challenge Week 2
+
+# import sqlite3
+
+# conn = sqlite3.connect('emaildb.sqlite')
+# cur = conn.cursor()
+
+# cur.execute('DROP TABLE IF EXISTS Counts')
+
+# cur.execute('''
+# CREATE TABLE Counts (org TEXT, count INTEGER)''')
+
+# fname = input('Enter file name: ')
+# if (len(fname) < 1): fname = 'mbox-short.txt'
+# fh = open(fname)
+# for line in fh:
+#     if not line.startswith('From: '): continue
+#     pieces = line.split()
+#     longEmail = pieces[1].split('@')
+#     email = longEmail[1]
+#     cur.execute('SELECT count FROM Counts WHERE org = ? ', (email,))
+#     row = cur.fetchone()
+#     if row is None:
+#         cur.execute('''INSERT INTO Counts (org, count)
+#                 VALUES (?, 1)''', (email,))
+#     else:
+#         cur.execute('UPDATE Counts SET count = count + 1 WHERE org = ?',
+#                     (email,))
+#     conn.commit()
+
+# # https://www.sqlite.org/lang_select.html
+# sqlstr = 'SELECT org, count FROM Counts ORDER BY count DESC LIMIT 10'
+
+# for row in cur.execute(sqlstr):
+#     print(str(row[0]), row[1])
+
+# cur.close()
+
+
+#org = re.findall('\@\S+', email)
+
+#! Chapter 15 - Database 
+#! Challenge Week 3
+
+# import sqlite3
+
+# conn = sqlite3.connect('tracks.sqlite') # creating the database name tracks
+# cur = conn.cursor() # it's like the file handler to the database server
+
+# # creating the tables
+# cur.executescript('''
+# DROP TABLE IF EXISTS Artist;
+# DROP TABLE IF EXISTS Album;
+# DROP TABLE IF EXISTS Track;
+# DROP TABLE IF EXISTS Genre;
+                                    
+# CREATE TABLE Artist (
+#     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+#     name    TEXT UNIQUE
+# );
+
+# CREATE TABLE Genre (
+#     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+#     name    TEXT UNIQUE
+# );
+
+# CREATE TABLE Album (
+#     id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+#     artist_id  INTEGER,
+#     title   TEXT UNIQUE
+# );
+
+# CREATE TABLE Track (
+#     id  INTEGER NOT NULL PRIMARY KEY 
+#         AUTOINCREMENT UNIQUE,
+#     title TEXT  UNIQUE,
+#     album_id  INTEGER,
+#     genre_id  INTEGER,
+#     len INTEGER, rating INTEGER, count INTEGER
+# );
+# ''')
+
+# # reading the csv or json file
+# fh = open('tracks.csv')
+# for line in fh:
+#     line = line.strip()
+#     pieces = line.split(',')
+#     if len(pieces) < 6 : continue
+
+#     name = pieces[0]
+#     artist = pieces[1]
+#     album = pieces[2]
+#     count = pieces[3]
+#     rating = pieces[4]
+#     length = pieces[5]
+#     genre = pieces[6]
+
+#     print(name, artist, album, count, rating, length, genre)
+
+#     # inserting the values of the file in the database tables
+#     # the ignore is like an error handling, It makes sure that if a particular title is already in the table, 
+#     # there are no duplicate rows inserted
+#     cur.execute('''INSERT OR IGNORE INTO Artist (name) 
+#         VALUES ( ? )''', ( artist, ) )
+#     cur.execute('SELECT id FROM Artist WHERE name = ? ', (artist, ))
+#     artist_id = cur.fetchone()[0]
+
+#     cur.execute('''INSERT OR IGNORE INTO Album (title, artist_id) 
+#         VALUES ( ?, ? )''', ( album, artist_id ) )
+#     cur.execute('SELECT id FROM Album WHERE title = ? ', (album, ))
+#     album_id = cur.fetchone()[0]
+
+#     cur.execute('''INSERT OR IGNORE INTO Genre (name) 
+#             VALUES ( ? )''', ( genre, ) )
+#     cur.execute('SELECT id FROM Genre WHERE name = ? ', (genre, ))
+#     genre_id = cur.fetchone()[0]
+
+#     cur.execute('''INSERT OR REPLACE INTO Track
+#         (title, album_id, genre_id, len, rating, count) 
+#         VALUES ( ?, ?, ?, ?, ?, ? )''', 
+#         ( name, album_id, genre_id, length, rating, count ) )
+
+#     conn.commit()
+
+    
+#! Chapter 15 - Database 
+#! Challenge Week 4
+
+import json
+import sqlite3
+
+conn = sqlite3.connect('rosterdb.sqlite')
+cur = conn.cursor()
+
+# Do some setup
+cur.executescript('''
+DROP TABLE IF EXISTS User;
+DROP TABLE IF EXISTS Member;
+DROP TABLE IF EXISTS Course;
+
+CREATE TABLE User (
+    id     INTEGER PRIMARY KEY,
+    name   TEXT UNIQUE
+);
+
+CREATE TABLE Course (
+    id     INTEGER PRIMARY KEY,
+    title  TEXT UNIQUE
+);
+
+CREATE TABLE Member (
+    user_id     INTEGER,
+    course_id   INTEGER,
+    role        INTEGER,
+    PRIMARY KEY (user_id, course_id)
+)
+''')
+
+# fname = input('Enter file name: ')
+# if len(fname) < 1:
+fname = 'roster_data.json'
+
+#   [ "Charley", "si110", 1 ],
+#   [ "Mea", "si110", 0 ],
+
+str_data = open(fname).read()
+json_data = json.loads(str_data)
+
+for entry in json_data:
+
+    name = entry[0]
+    title = entry[1]
+    role = entry[2]
+
+    #print((name, title, role))
+
+    cur.execute('''INSERT OR IGNORE INTO User (name)
+        VALUES ( ? )''', ( name, ) )
+    cur.execute('SELECT id FROM User WHERE name = ? ', (name, ))
+    user_id = cur.fetchone()[0]
+
+    cur.execute('''INSERT OR IGNORE INTO Course (title)
+        VALUES ( ? )''', ( title, ) )
+    cur.execute('SELECT id FROM Course WHERE title = ? ', (title, ))
+    course_id = cur.fetchone()[0]
+
+    cur.execute('''INSERT OR REPLACE INTO Member
+        (user_id, course_id, role) VALUES ( ?, ?, ? )''',
+        ( user_id, course_id, role ) )
+
+    conn.commit()
