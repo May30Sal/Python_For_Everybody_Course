@@ -1,0 +1,926 @@
+city,count
+São Paulo,260
+Brasília,128
+Rio de Janeiro,105
+Belo Horizonte,87
+Curitiba,85
+Salvador,63
+Fortaleza,61
+Recife,59
+Goiânia,52
+Porto Alegre,51
+Teresina,38
+Cuiabá,35
+São Luís,33
+Vitória,31
+Manaus,29
+João Pessoa,28
+Florianópolis,28
+Belém,28
+Maceió,25
+Campinas,22
+Campo Grande,21
+Aracaju,20
+Juiz de Fora,19
+Montes Claros,19
+Maringá,19
+São Bernardo do Campo,18
+Ribeirão Preto,18
+Natal,18
+Joinville,18
+Guarulhos,18
+São José dos Campos,17
+Cascavel,16
+Vila Velha,16
+Palmas,16
+Porto Velho,16
+Sete Lagoas,16
+Macapá,16
+Santo André,16
+Londrina,16
+São José do Rio Preto,15
+Campina Grande,14
+Serra,13
+Anápolis,13
+Cariacica,13
+Campos dos Goytacazes,13
+Ipatinga,13
+Araguaína,13
+Sorocaba,13
+Feira de Santana,13
+Uberlândia,13
+Osasco,12
+Passo Fundo,12
+Pouso Alegre,12
+Blumenau,12
+Foz do Iguaçu,12
+Petrolina,12
+Ponta Grossa,11
+Caxias do Sul,11
+Jundiaí,11
+Boa Vista,11
+Contagem,10
+Jaraguá do Sul,10
+Chapecó,10
+Cachoeiro de Itapemirim,10
+Rio Branco,10
+Olinda,10
+Jaboatão dos Guararapes,10
+Marília,10
+Bauru,10
+Juazeiro do Norte,10
+Garanhuns,10
+Santos,10
+Lauro de Freitas,10
+Uberaba,9
+Santa Maria,9
+Conselheiro Lafaiete,9
+Taubaté,9
+Niterói,9
+Arapiraca,9
+Imperatriz,9
+Itumbiara,9
+Mogi das Cruzes,8
+Mossoró,8
+Araçatuba,8
+Guarapari,8
+Nova Andradina,8
+Sobral,8
+Barretos,8
+Valença,8
+Caruaru,8
+Piracicaba,8
+Franca,8
+Vitória da Conquista,8
+Itajaí,8
+Altamira,8
+Nova Lima,8
+Criciúma,8
+Catalão,7
+Itabuna,7
+Pelotas,7
+São Carlos,7
+Teófilo Otoni,7
+Marabá,7
+Aparecida de Goiânia,7
+Itajubá,7
+Tianguá,7
+Itapetininga,7
+Parnaíba,7
+Rondonópolis,7
+Avaré,7
+São José,7
+Itabira,7
+Mauá,7
+São Gonçalo,7
+São Caetano do Sul,7
+Rio Verde,7
+Vilhena,6
+Governador Valadares,6
+Cotia,6
+Alagoinhas,6
+Serra Talhada,6
+Divinópolis,6
+Dourados,6
+Botucatu,6
+Jataí,6
+Rio do Sul,6
+Novo Hamburgo,6
+Barbacena,6
+Assis,6
+Duque de Caxias,6
+Pindamonhangaba,6
+Santarém,6
+Araraquara,5
+Itabirito,5
+Cornélio Procópio,5
+Formosa,5
+Praia Grande,5
+Petrópolis,5
+São Mateus,5
+Catanduva,5
+Guarujá,5
+Crato,5
+Brusque,5
+Abaetetuba,5
+Jacarezinho,5
+Balneário Camboriú,5
+Juazeiro,5
+Ji-Paraná,5
+Concórdia,5
+Guarapuava,5
+Caratinga,5
+Votuporanga,5
+Sorriso,5
+Goiana,5
+Mogi Guaçu,5
+Parauapebas,5
+Indaiatuba,5
+Presidente Prudente,5
+Betim,5
+Matão,5
+Patos de Minas,5
+Arapongas,5
+Muriaé,5
+Itu,5
+Cruzeiro,5
+Jacareí,5
+Jacobina,5
+Cruz das Almas,5
+Jequié,5
+Tatuí,5
+Sinop,5
+Redenção,4
+Resende,4
+Timon,4
+Mariana,4
+Araras,4
+São João da Boa Vista,4
+Americana,4
+Além Paraíba,4
+Toledo,4
+Lins,4
+Eunápolis,4
+Garça,4
+Cataguases,4
+Parnamirim,4
+Araripina,4
+Iguatu,4
+São Lourenço,4
+Três Rios,4
+Pirapora,4
+Passos,4
+Cacoal,4
+Rio Claro,4
+Valparaíso de Goiás,4
+Lavras,4
+Sumaré,4
+Cajazeiras,4
+Arcoverde,4
+Senhor do Bonfim,4
+Luziânia,4
+Nova Iguaçu,4
+Lorena,4
+Quixadá,4
+São Bento do Sul,4
+Nova Serrana,4
+Bento Gonçalves,4
+Itanhaém,4
+Volta Redonda,4
+Palhoça,4
+Erechim,4
+Paraíso do Tocantins,4
+Ponte Nova,4
+Limoeiro do Norte,4
+Tucuruí,4
+Curvelo,4
+Limeira,4
+Bagé,4
+Belo Jardim,4
+Camaçari,4
+Irecê,4
+Itapeva,4
+Jaú,4
+Santa Cruz do Sul,4
+Luís Eduardo Magalhães,4
+Ananindeua,4
+Itaperuna,4
+Vitória de Santo Antão,4
+Três Pontas,4
+Várzea Grande,4
+Jaboticabal,4
+Guanambi,4
+Apucarana,4
+Manacapuru,3
+Guaratinguetá,3
+Macaé,3
+Campo Verde,3
+Penápolis,3
+Maracanaú,3
+Paracatu,3
+Manhuaçu,3
+Viçosa,3
+Ibiúna,3
+Colatina,3
+Bragança Paulista,3
+Picos,3
+Lages,3
+Ibitinga,3
+São Roque,3
+Porto Seguro,3
+Alfenas,3
+Patos,3
+Umuarama,3
+Votorantim,3
+Piumhi,3
+Santana de Parnaíba,3
+Santa Cruz do Capibaribe,3
+Ilha Solteira,3
+São João del Rei,3
+Varginha,3
+Carapicuíba,3
+Taquaritinga,3
+Paragominas,3
+Itaituba,3
+Barra Bonita,3
+Canoas,3
+Itapecerica da Serra,3
+Cabo de Santo Agostinho,3
+Caçador,3
+Janaúba,3
+Mairiporã,3
+Sertãozinho,3
+Ilhéus,3
+Santos Dumont,3
+Patrocínio,3
+Santa Inês,3
+Porangatu,3
+Guarantã do Norte,3
+Quixeramobim,3
+Ponta Porã,3
+Ariquemes,3
+Três Lagoas,3
+Caxias,3
+Unaí,3
+Bebedouro,3
+Moji Mirim,3
+Ourinhos,3
+Rio Grande,3
+Ijuí,3
+Palmares,3
+Camaquã,3
+Teixeira de Freitas,3
+Tupã,3
+Dracena,3
+Tangará da Serra,3
+Almenara,3
+Sarandi,3
+Trindade,3
+Araucária,3
+Caldas Novas,3
+Barreiras,3
+Iúna,3
+Birigui,3
+Leopoldina,3
+Barueri,3
+Senador Canedo,3
+Santo Ângelo,3
+Andradina,3
+Cabedelo,2
+Mangueirinha,2
+Barra do Garças,2
+Cáceres,2
+Belford Roxo,2
+Tubarão,2
+Araguatins,2
+Milhã,2
+Igarassu,2
+Juína,2
+Araguari,2
+Francisco Morato,2
+Aimorés,2
+São Pedro da Aldeia,2
+Venda Nova do Imigrante,2
+Santa Bárbara d´Oeste,2
+São Sebastião do Paraíso,2
+Suzano,2
+Ribeirão das Neves,2
+Presidente Venceslau,2
+Caicó,2
+Campina Verde,2
+Ipu,2
+Capanema,2
+Brumado,2
+Virginópolis,2
+Corumbá,2
+Lagoa Santa,2
+Ivaiporã,2
+Caraguatatuba,2
+Vinhedo,2
+Lucas do Rio Verde,2
+Floresta,2
+Dianópolis,2
+Palmeiras de Goiás,2
+Cruzeiro do Sul,2
+Capim Grosso,2
+Pato Branco,2
+Penedo,2
+Araruama,2
+Marau,2
+Paulista,2
+Olímpia,2
+Arujá,2
+Sabará,2
+Pau dos Ferros,2
+Guarabira,2
+Horizonte,2
+Barra Mansa,2
+Naviraí,2
+Paranavaí,2
+Aracati,2
+Afogados da Ingazeira,2
+Itapipoca,2
+Garibaldi,2
+Crateús,2
+Carangola,2
+São Joaquim da Barra,2
+Lençóis Paulista,2
+Timbaúba,2
+São Gotardo,2
+Cidade Ocidental,2
+Águas Lindas de Goiás,2
+Telêmaco Borba,2
+Serrinha,2
+Itapira,2
+Rancharia,2
+Niquelândia,2
+Bom Despacho,2
+Juatuba,2
+Iguape,2
+Paulínia,2
+Linhares,2
+Boa Esperança,2
+Hortolândia,2
+Monte Carmelo,2
+Dois Vizinhos,2
+Alta Floresta,2
+Campos Gerais,2
+Embu,2
+Guaratuba,2
+Várzea Paulista,2
+Barracão,2
+Rolim de Moura,2
+Araxá,2
+Ibicaraí,2
+Sousa,2
+Porto Feliz,2
+Codó,2
+Porto Nacional,2
+Santa Cruz do Rio Pardo,2
+Poços de Caldas,2
+Bandeirantes,2
+Andrelândia,2
+Nanuque,2
+Ituverava,2
+Bacabal,2
+Cachoeirinha,2
+Campo Largo,2
+Itaúna,2
+Três Corações,2
+Fátima do Sul,2
+São Lourenço da Mata,2
+São Pedro do Piauí,2
+Icó,2
+São Leopoldo,2
+Pacajus,2
+Taboão da Serra,2
+Valinhos,2
+Pinheiro,2
+Carpina,2
+São Raimundo Nonato,2
+São João de Meriti,2
+Açu,2
+São José dos Pinhais,2
+Caucaia,2
+Belém de São Francisco,2
+Bom Jesus do Itabapoana,2
+Laranjeiras do Sul,2
+Lagarto,2
+Jales,2
+Conselheiro Pena,2
+Alvorada,2
+Tailândia,2
+Machado,2
+Santa Rita do Passa Quatro,2
+Congonhas,2
+Ubá,2
+Campo Mourão,2
+Santo Antônio de Jesus,2
+Mineiros,2
+Monte Santo,2
+Palmeira dos Índios,2
+Caarapó,2
+Santo Antônio de Pádua,2
+Canoinhas,2
+Primavera do Leste,2
+Afonso Cláudio,2
+São Miguel do Oeste,2
+Bragança,2
+Piraju,2
+Itacoatiara,2
+Canindé,2
+Santa Rita do Sapucaí,2
+Vespasiano,2
+Bicas,2
+Itaquaquecetuba,2
+Quissamã,2
+Loanda,2
+Ribeirão Pires,2
+Porteirinha,2
+Paranaguá,2
+Guanhães,2
+Santa Cruz Cabrália,2
+Aracruz,2
+São Manuel,2
+Piripiri,2
+União da Vitória,2
+Colíder,2
+Castanhal,2
+Pirassununga,2
+Fernandópolis,2
+Pedreiras,2
+São Vicente,2
+Ampére,2
+João Monlevade,2
+São Francisco,2
+Açailândia,2
+Gravataí,2
+Adamantina,2
+Diadema,2
+Itápolis,2
+Quirinópolis,2
+Nova Mutum,2
+Bom Jesus da Lapa,2
+Santa Maria da Vitória,2
+Marechal Cândido Rondon,2
+Mococa,2
+Campo Belo,2
+Itaboraí,2
+Floriano,2
+Cambé,2
+Timóteo,2
+Pedro Afonso,2
+São Sebastião,2
+Salgueiro,2
+Coari,1
+Holambra,1
+Canto do Buriti,1
+Nazaré da Mata,1
+Canela,1
+Augustinópolis,1
+Espírito Santo do Pinhal,1
+Elesbão Veloso,1
+Roseira,1
+Mato Verde,1
+Taquara,1
+Itapiranga,1
+São Romão,1
+Araçuaí,1
+Oliveira,1
+Selvíria,1
+Serrolândia,1
+Presidente Dutra,1
+Sabinópolis,1
+Cabo Frio,1
+Tocantins,1
+São Gonçalo do Amarante,1
+Pará de Minas,1
+Bertioga,1
+Bezerros,1
+Paraguaçu Paulista,1
+Irati,1
+São Marcos,1
+São Vicente de Minas,1
+Paulo Afonso,1
+Coronel João Sá,1
+Igrejinha,1
+Registro,1
+Cianorte,1
+Bocaiúva,1
+Alvarenga,1
+Conceição das Alagoas,1
+Cabrobó,1
+Bacabeira,1
+Santa Rosa,1
+Divino,1
+Ladainha,1
+Lajinha,1
+Pereira Barreto,1
+Balsas,1
+Capitão Leônidas Marques,1
+Santo Antônio do Descoberto,1
+Remanso,1
+Recreio,1
+Ribeirão Bonito,1
+Ubiratã,1
+Itaguaí,1
+Raposos,1
+Mutum,1
+Cocal do Sul,1
+São Luís de Montes Belos,1
+Central de Minas,1
+Wenceslau Braz,1
+Barroso,1
+Ipirá,1
+Coronel Fabriciano,1
+Diamantina,1
+Cristalina,1
+São João Nepomuceno,1
+Padre Bernardo,1
+Jaguariúna,1
+Campina Grande do Sul,1
+Timbó,1
+Orleans,1
+Orlândia,1
+Tietê,1
+Rio das Pedras,1
+Sapucaia do Sul,1
+Itabaiana,1
+Dias d´Ávila,1
+Rio Bonito,1
+Rio Verde de Mato Grosso,1
+Luzerna,1
+João Pinheiro,1
+Mantena,1
+Matias Barbosa,1
+Xaxim,1
+Vassouras,1
+Campo Limpo Paulista,1
+Cacimbinhas,1
+Jandaia do Sul,1
+Santa Quitéria,1
+Anchieta,1
+Atibaia,1
+Matipó,1
+Milagres,1
+Perdões,1
+Socorro,1
+São Gabriel da Palha,1
+Getúlio Vargas,1
+Horizontina,1
+Tupi Paulista,1
+Mirassol,1
+Capão da Canoa,1
+Aguaí,1
+São Gonçalo do Rio Abaixo,1
+Porecatu,1
+Monte Aprazível,1
+Santo Antônio da Platina,1
+Assis Chateaubriand,1
+Guararapes,1
+Cambuí,1
+Liberdade,1
+Ibaiti,1
+Ipiaú,1
+Pires do Rio,1
+Novo Cabrais,1
+Santa Rita,1
+Raul Soares,1
+Rosana,1
+Matozinhos,1
+Parambu,1
+Capão Bonito,1
+Mandaguari,1
+Novo Gama,1
+Luz,1
+Amambaí,1
+Realeza,1
+Mundo Novo,1
+Irará,1
+Medianeira,1
+Alto Horizonte,1
+São Domingos do Prata,1
+Terra Boa,1
+Monte Alto,1
+Inhumas,1
+Campo Maior,1
+Três de Maio,1
+Santa Teresa,1
+São José de Ribamar,1
+Lago da Pedra,1
+Chopinzinho,1
+Piracanjuba,1
+Viamão,1
+Coroatá,1
+Matupá,1
+Riachão do Jacuípe,1
+Santo Antônio do Monte,1
+Itatiba,1
+Jaicós,1
+Belo Oriente,1
+Franco da Rocha,1
+Conceição do Castelo,1
+Água Boa,1
+Conceição do Coité,1
+Itaobim,1
+Maranguape,1
+Itaberaba,1
+Caieiras,1
+Jussara,1
+Ibiraçu,1
+Itararé,1
+Xinguara,1
+Igarapé-Miri,1
+Rio Negrinho,1
+Quedas do Iguaçu,1
+Seropédica,1
+Pimenta Bueno,1
+Uruguaiana,1
+Goioerê,1
+Ceres,1
+Ribeira do Pombal,1
+Corrente,1
+Cruzeiro do Oeste,1
+Salto,1
+Lambari,1
+Leme,1
+Limoeiro,1
+Ivatuba,1
+Visconde do Rio Branco,1
+Ibiporã,1
+Lucélia,1
+Junqueirópolis,1
+Mirandópolis,1
+Capivari,1
+Cambuquira,1
+Parnarama,1
+Paranaíba,1
+Astorga,1
+Anicuns,1
+Lapa,1
+Surubim,1
+Nova Venécia,1
+Guaiúba,1
+Francisco Beltrão,1
+Cláudio,1
+Nova Friburgo,1
+Senhora dos Remédios,1
+Tapejara,1
+Alto Santo,1
+Croatá,1
+Vargem Grande Paulista,1
+Itaberaí,1
+Itaúba,1
+Ourilândia do Norte,1
+Escada,1
+Sidrolândia,1
+Rubiataba,1
+Ribas do Rio Pardo,1
+Piraúba,1
+Machadinho D´Oeste,1
+Vazante,1
+Viana,1
+Bambuí,1
+Clevelândia,1
+Colorado do Oeste,1
+Setubinha,1
+Seringueiras,1
+São Miguel do Iguaçu,1
+Manhumirim,1
+Ituiutaba,1
+Frutal,1
+José Bonifácio,1
+Santana do Ipanema,1
+Santa Luzia,1
+Currais Novos,1
+Paraíso do Norte,1
+Novo Horizonte,1
+Itapevi,1
+Piranguinho,1
+Indiara,1
+Jeremoabo,1
+Baependi,1
+Agudos,1
+Jaboticatubas,1
+Sumé,1
+Formiga,1
+Jaciara,1
+Cubatão,1
+Vitória do Mearim,1
+Uruçuí,1
+Pontalina,1
+Felixlândia,1
+Carmo do Paranaíba,1
+Casa Branca,1
+Mafra,1
+São João do Piauí,1
+Araranguá,1
+Buritis,1
+Pesqueira,1
+Barra do Corda,1
+Guaxupé,1
+São Miguel,1
+Pinheiros,1
+São José do Egito,1
+Restinga Seca,1
+Tefé,1
+Nova Odessa,1
+Paraíba do Sul,1
+Salinas,1
+Coromandel,1
+Capivari de Baixo,1
+Catanduvas,1
+Nova Porteirinha,1
+Santa Terezinha de Goiás,1
+Itinga do Maranhão,1
+Nazareno,1
+Alegre,1
+Extrema,1
+Boituva,1
+São Félix do Xingu,1
+Farroupilha,1
+Martinópolis,1
+Baturité,1
+Palotina,1
+Presidente Epitácio,1
+Santa Fé do Sul,1
+Colinas do Tocantins,1
+Caçapava,1
+Tobias Barreto,1
+Paracambi,1
+Guaraí,1
+Uruaçu,1
+Cerquilho,1
+Bom Sucesso,1
+Osório,1
+Rio das Ostras,1
+São José da Tapera,1
+Piratininga,1
+São Mateus do Maranhão,1
+Fazenda Rio Grande,1
+São Cristóvão,1
+Peruíbe,1
+Joaçaba,1
+Santo Augusto,1
+Pinhalzinho,1
+Nossa Senhora do Socorro,1
+Itambacuri,1
+Camocim,1
+Navegantes,1
+Buriticupu,1
+Cajamar,1
+Miguel Pereira,1
+Artur Nogueira,1
+Jandira,1
+Juara,1
+São José dos Quatro Marcos,1
+Poté,1
+Luminárias,1
+Abadia dos Dourados,1
+São José do Rio Pardo,1
+Lagoa dos Patos,1
+Cruz Alta,1
+Alto Boa Vista,1
+São Mateus do Sul,1
+Rolândia,1
+Ferraz de Vasconcelos,1
+Abaeté,1
+Tucano,1
+Itapuranga,1
+Pedro Leopoldo,1
+Itanhandu,1
+Pium,1
+Novo Progresso,1
+Lajeado,1
+Queimadas,1
+Nepomuceno,1
+Piranga,1
+Tupaciguara,1
+Osvaldo Cruz,1
+Ouro Preto,1
+Palmitos,1
+Paço do Lumiar,1
+Campo Erê,1
+Muzambinho,1
+Bertópolis,1
+Ituberá,1
+Santana,1
+Santa Maria de Jetibá,1
+Água Branca,1
+Ouro Preto do Oeste,1
+Castelo,1
+Teresópolis,1
+Benevides,1
+Guaramirim,1
+Nilópolis,1
+Dores do Indaiá,1
+Chapadinha,1
+Euclides da Cunha,1
+Itaporanga,1
+Maria da Fé,1
+Gurupi,1
+Reduto,1
+Maricá,1
+Diamantino,1
+Ivoti,1
+Januária,1
+Lupércio,1
+Teodoro Sampaio,1
+Uruana de Minas,1
+Barcarena,1
+Itapoá,1
+Várzea da Palma,1
+Estrela,1
+Aquidauana,1
+Amparo,1
+Pitanga,1
+São Fidélis,1
+Paripiranga,1
+Capelinha,1
+Candeias,1
+Ipaussu,1
+Barra de São Francisco,1
+Paraisópolis,1
+Iporã,1
+Queimados,1
+Colombo,1
+Pompéia,1
+Batatais,1
+Goiatuba,1
+Chapadão do Sul,1
+Umbaúba,1
+Pederneiras,1
+Jaru,1
+Iturama,1
+Campo Formoso,1
+Itamaraju,1
+Cachoeira,1
+Ouro Fino,1
+Carmópolis de Minas,1
+Barão de Cocais,1
+Araputanga,1
+Breves,1
+Matelândia,1
+Tucumã,1
+Arcos,1
+Rio Novo,1
+Arapoti,1
+Nova Xavantina,1
+Brumadinho,1
+Divisa Alegre,1
+Marialva,1
+Porto Belo,1
+Campos Altos,1
+Cafelândia,1
+Parintins,1
+Goianésia,1
+Guaçuí,1
+Elói Mendes,1
+Ipojuca,1
+Campo Novo do Parecis,1
+Auriflama,1
+Casa Nova,1
+Costa Rica,1
+Bonito,1
+Nova Petrópolis,1
+Pinhais,1
+Iguatama,1
+São Paulo das Missões,1
+Iporá,1
+Indaial,1
+Jaraguá,1
+Canindé de São Francisco,1
+Jaguariaíva,1
+Conchas,1
+Itapema,1
+Pão de Açúcar,1
+Nova Esperança,1
+Coxim,1
+Morrinhos,1
+Guaporé,1
+Cassilândia,1
+São Bento,1
+Castro,1
+Cachoeira Paulista,1
+Eusébio,1
+Taguaí,1
