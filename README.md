@@ -3,8 +3,8 @@
 In this Python course I learned about:</br>
 - [x] basics of python: variables, operators, functions, and loops
 - [x] data structures: strings, files, lists, dicts, tuples
-- [ ] Regular expressions and integration with the web
-- [ ] integration with databases
+- [x] Regular Expressions and integration with the web
+- [x] integration with databases
 
 📄💻Here I share all the notes I took during the classes, as well as my solutions to the exercises.
 </br>
@@ -15,7 +15,7 @@ In this Python course I learned about:</br>
 Ao longo desse curso eu aprendi:</br>
 - [x] básico de python: variáveis, operadores, funções e loops
 - [x] estruturas de dados: strings, files, lists, dicts, tuples
-- [ ] Regular expressions e integração com a web
-- [ ] integração com bancos de dados
+- [x] Regular Expressions e integração com a web
+- [x] integração com bancos de dados
 
 💻📄Aqui eu compartilho as notas que escrevi ao longo do curso, bem como minhas soluções para exercícios propostos. 
